@@ -1,10 +1,10 @@
 require File.expand_path('../lib/globalize3/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name         = 'globalize3'
+  s.name         = 'globalize3Ex'
   s.version      = Globalize3::VERSION
   s.authors      = ['Sven Fuchs', 'Joshua Harvey', 'Clemens Kofler', 'John-Paul Bader', 'Tomasz Stachewicz', 'Philip Arndt']
-  s.email        = 'nobody@globalize-rails.org'
+  s.email        = 'jpereira@jpereira.eu'
   s.homepage     = 'http://github.com/svenfuchs/globalize3'
   s.summary      = 'Rails I18n de-facto standard library for ActiveRecord 3 model/data translation'
   s.description  = "#{s.summary}."
@@ -14,7 +14,9 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.rubyforge_project = '[none]'
 
+  puts "###Adding dep..."
   if ENV['RAILS_3_0']
+
     s.add_dependency 'activerecord', '~> 3.0.0'
     s.add_dependency 'activemodel', '~> 3.0.0'
   elsif ENV['RAILS_3_1']
@@ -28,7 +30,7 @@ Gem::Specification.new do |s|
     s.add_dependency 'activerecord', '>= 3.0.0'
     s.add_dependency 'activemodel', '>= 3.0.0'
   end
-  s.add_dependency 'paper_trail',  '~> 2'
+  s.add_dependency 'paper_trail',  '~> 3.0.0.beta1'
 
   s.add_development_dependency 'database_cleaner', '~> 0.6.0'
   s.add_development_dependency 'mocha'
