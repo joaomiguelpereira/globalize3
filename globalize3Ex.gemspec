@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.rubyforge_project = '[none]'
 
-  puts "###Adding dep..."
   if ENV['RAILS_3_0']
 
     s.add_dependency 'activerecord', '~> 3.0.0'
